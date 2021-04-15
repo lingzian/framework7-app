@@ -1,0 +1,38 @@
+{
+  "include": ["src/**/*", "typings.d.ts"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ],
+  "compilerOptions": {
+    "target": "esnext",                                /* TypeScript文件编译后生成的javascript文件里的语法应该遵循哪个JavaScript的版本生成js 的版本 */
+    "module": "esnext",                             /* 就是你的TypeScript文件中的module，采用何种方式实现 */
+    "declaration": true,                            /* 是否生成d.ts类型声明文件 */
+    "sourceMap": true,                              /* 生成对应的 map 文件 */
+    "outDir": "./dist",                             /* 这个是用于指定编译结果的输出目录的 */
+    "rootDir": "src",                               /* 定义输入文件根目录 */
+    "strict": true,                                 /* 使用严格模式 */
+    "jsx": "react",
+
+    /* Additional Checks */
+    "noUnusedLocals": true,                         /* 未使用的本地变量将报错 */
+    "noUnusedParameters": true,                     /* 未使用的参数将报错 */
+    "noImplicitReturns": true,                      /* 函数所有路径都必须有显示 return */
+    "noFallthroughCasesInSwitch": true,             /* switch 语句中，每个 case 都要有 break */
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",                     /* 就是告诉TypeScript编译器，采用何种方式解析（也就是查找）TypeScript文件中依赖的模块的位置  在node_module里面查找@types/里面的类型文件*/
+    "baseUrl": ".",                                 /* 与 path 一同定义模块查找的路径*/
+    "paths": {"@/*": ["src/*"]},                    /* 与 baseUrl 一同定义模块查找的路径 */
+    "esModuleInterop": true,                        /* 作用是支持使用import d from 'cjs'的方式引入commonjs包 */
+
+    /* Experimental Options */
+    "experimentalDecorators": true,                 /* 允许注解语法 */
+    
+
+    /* Advanced Options */
+    "skipLibCheck": true,                           /* 对库定义文件跳过类型检查 */
+  }
+}

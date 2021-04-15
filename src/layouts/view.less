@@ -1,0 +1,91 @@
+#mainToolbar {
+  .tab-link-active {
+    // .icon-activity::before {
+    //   content: '\ea01';
+    // }
+    // .icon-earn::before {
+    //   content: "\ea09";
+    // }
+    // .icon-pdd::before {
+    //   content: '\ea15';
+    // }
+    // .icon-find::before {
+    //   content: "\ea0b";
+    // }
+    // .icon-user::before {
+    //   content: '\ea26';
+    // }
+  }
+}
+#view-发现 {
+  .navbar ~ *, .navbars ~ * {
+    // --f7-page-navbar-offset: 0;
+    --f7-page-navbar-offset: calc(var(--f7-safe-area-top));
+  }
+}
+
+#mainToolbar{
+  .toolbar-inner{
+    overflow: visible;
+    z-index: 20;
+    .tab-link{
+      overflow: visible;
+    }
+  }
+  .toolbar-img-container{
+    width: 21/12rem;
+    height: 21/12rem;
+    &.calendar{
+      background-image: url('./img/calendar.png');
+      background-size: 100% 100%;
+    }
+    &.weather{
+      background-image: url('./img/weather.png');
+      background-size: 100% 100%;
+    }
+    &.bless{
+      background-image: url('./img/icon-bless.png');
+      background-size: 100% 100%;
+    }
+    &.activity{
+      position: relative;
+      overflow: visible;
+    }
+    &.activity-container{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -39/2/12rem;
+      width: 39/12rem;
+      height: 40/12rem;
+      background-image: url('./img/activity.gif');
+      background-size: 100% 100%;
+    }
+    &.user{
+      background-image: url('./img/user.png');
+      background-size: 100% 100%;
+    }
+  }
+  .tab-link-active{
+    .toolbar-img-container{
+      &.calendar{
+        background-image: url('./img/calendar--active.png');
+      }
+      &.weather{
+        background-image: url('./img/weather--active.png');
+      }
+      &.user{
+        background-image: url('./img/user--active.png');
+      }
+      &.bless{
+        background-image: url('./img/icon-bless-active.png');
+      }
+    }
+  }
+  &.toolbar-hidden{
+    .toolbar-img-container.activity{
+      overflow: hidden;
+    }
+  }
+}
+
