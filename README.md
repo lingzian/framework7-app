@@ -1,4 +1,4 @@
-# f7-test
+# Framework7 + react + typescript app初始模板
 
 ## Framework7 CLI Options
 
